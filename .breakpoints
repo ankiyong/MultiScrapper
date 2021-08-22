@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main2.py": [
+      {
+        "id": "2be12fca-1cf4-4d03-924d-780fe7ec0cd3",
+        "line": 22,
+        "version": 0,
+        "index": 616
+      }
+    ],
+    "weworkremotely.py": [
+      {
+        "id": "fb649ae0-c54c-4c7b-a097-c4f21df0d3a9",
+        "line": 10,
+        "version": 58,
+        "index": 290
+      }
+    ]
+  }
+}
