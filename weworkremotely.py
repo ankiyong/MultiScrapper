@@ -1,16 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
-def get_wewo_soup():
-  url = 'https://weworkremotely.com/remote-jobs/search?term=python'
+def get_wewo_soup(word):
+  url = f'https://weworkremotely.com/remote-jobs/search?term={word}'
   res = requests.get(url)
   soup = BeautifulSoup(res.text,'html.parser')
   item_box = soup.find('div',{'id':'job_list'}).find_all('ul')
   return item_box
 
-def extract_wewo_jobs(item_box):
+def extract_wewo_jobs(word):
   url = 'https://weworkremotely.com/'
   info_dict = []
+  item_box = get_wewo_soup(word)
   for item in item_box:
     box = item.find_all('li')
     for list in box:
